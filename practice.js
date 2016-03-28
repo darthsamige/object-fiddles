@@ -4,7 +4,12 @@
 //Create an object called me. Give it a key of name with the value being your name, and another key of age with the value being your age. Then alert your name using dot notation.
 
   //Code here
-
+var me = {
+    name: "Sam",
+    age: "29",
+    
+}
+alert (me.name);
 
 
 
@@ -16,17 +21,29 @@
 //Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
 
   //Code here
+  var favoriteThings = {
+      band: "Amon Amarth",
+      food: "tacos",
+      person: "Faith O'Barr",
+      book: "The Icelandic Saga",
+      movie: "Conan the Barbarian",
+      holiday: "Halloween",
+  }
+
 
 
 //After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 
   //Code here
+favoriteThings.car = "Charokee Trail Hawk";
+favoriteThings.brand = "Jeep";
 
 
 //Now change the food key in your favoriteThings object to be 'Lettuce' and change the book key in your favoriteThings object to be '50 Shades of Gray'.
 
   //Code here
-
+favoriteThings.food = "Lettuce";
+favoriteThings.book = "50 Shades of Gray";
 
 
 
@@ -43,17 +60,24 @@ Using dot notation, add another key (or property) to your backPack object
 that is named color, with the value being the color of your backpack. */
 
   //Code here
+  
+  var backPack ={}
+  
+var item = "firstPocket";
+backPack[item] = "chapstick";
+
 
 //After you do the above, alert your entire backPack object.
 
   //Code here
+  alert(backPack);
 
 /*You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. */
 
   //Code here
-
+console.log(backPack);
 
 
 
@@ -65,12 +89,23 @@ Instead, console.log your whole backPack object and then check out the console. 
 //Create an 'alsoMe' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
 
   //Code Here
+  
+  var alsoMe={
+      name: "Sam",
+      age: "29",
+      height: "5 feet 10 inches",
+      gender: "male",
+      married: "yes",
+      eyeColor: "blue",
+      hairColor: "brown",
+  }
 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
   //Code Here
-
-
+for(var i=0 in alsoMe) {
+  alert(alsoMe [i]);
+}
 
 
 //NEXT PROBLEM
@@ -81,11 +116,22 @@ Instead, console.log your whole backPack object and then check out the console. 
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
 
   //Code Here
+  var album = {
+      song1:'2:45',
+      song2:'3:00',
+      song3:'4:00',
+      song4:'4:00',
+      song5:'5:00'
+  }
+
 
 //Now, loop through your album object alerting every song title individually.
 
   //Code Here
-
+for (var song in album){
+    alert(album[song]);
+    //noprotect
+}
 
 
 
@@ -97,6 +143,21 @@ Instead, console.log your whole backPack object and then check out the console. 
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
   //Code Here
+  var states ={
+      arizona : 60,
+      utah : 20,
+      washinton: 40,
+      oregon: 20,
+      main: 10,
+  }
+  
+  for (var prop in states){
+      if (states[prop] > 30){
+          alert(states[prop])
+          //noprotect
+      }
+  }
+  
 
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
@@ -150,10 +211,13 @@ var user2 = {
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
   //Code Here
+  user2['name'] = "Tyler S. McGinnis";
+  user2['email'] = 'tyler.mcginnis@devmounta.in';
 
 //Now call the sayName method that's on the user object which will alert the users email
 
   //Code Here
+  alert(user2.email);
 
 
 
@@ -166,12 +230,21 @@ var user2 = {
 //Create an empty object called methodCollection.
 
   //Code Here
-
+var methodCollection{
+    
+}
 /*Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. */
 
   //Code Here
+ methodCollection.function alertHello(){
+      alert("hello");
+  }
+  
+  methodCollection
+  
+  
 
 //Now call your alertHello and logHello methods.
 
